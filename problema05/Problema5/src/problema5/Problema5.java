@@ -23,10 +23,10 @@ public class Problema5 {
         
         String nombreCliente;
         //precio base
-        int precioMensualNetflix;
-        int precioMensualYouTube;
-        int precioMensualDropBox;
-        int precioMensualSpotify;
+        double precioMensualNetflix;
+        double precioMensualYouTube;
+        double precioMensualDropBox;
+        double precioMensualSpotify;
         // Dinero que se descuenta
         double descuentoNetflix;
         double descuentoYouTube;
@@ -38,7 +38,7 @@ public class Problema5 {
         double precioFinalDropBox;
         double precioFinalSpotify;
         
-        int costoTotal;
+        double costoTotal;
         double dineroAhorrado;
         double costoTotalDescuento;
         
@@ -46,13 +46,13 @@ public class Problema5 {
         nombreCliente = entrada.nextLine();
         
         System.out.println("Ingrese la mensualidad de Netflix");
-        precioMensualNetflix = entrada.nextInt();
+        precioMensualNetflix = entrada.nextDouble();
         System.out.println("Ingrese la mensualidad de YouTube");
-        precioMensualYouTube = entrada.nextInt();
+        precioMensualYouTube = entrada.nextDouble();
         System.out.println("Ingrese la mensualidad de DropBox");
-        precioMensualDropBox = entrada.nextInt();
+        precioMensualDropBox = entrada.nextDouble();
         System.out.println("Ingrese la mensualidad de Spotify");
-        precioMensualSpotify = entrada.nextInt();
+        precioMensualSpotify = entrada.nextDouble();
         // calcular el dinero que no tiene que pagar, que se  descuenta
         descuentoNetflix = 0.23 * precioMensualNetflix;
         descuentoYouTube = 0.23 * precioMensualYouTube;
@@ -70,12 +70,30 @@ public class Problema5 {
         // Dinero ahorrado
         dineroAhorrado = costoTotal - costoTotalDescuento;
         
-        System.out.printf("Nombre del cliente Precio mensual de Netflix "
-                + "Precio mensual de YouTube "
-                + "Precio mensual de DropBox"
-                + "Precio mensual de Spotify"
-                + "");
-                
+        System.out.printf("Nombre del cliente: %s\n" 
+                + "Precio mensual de Netflix %.2f\n"
+                + "Precio mensual de YouTube %.2f\n"
+                + "Precio mensual de DropBox %.2f\n"
+                + "Precio mensual de Spotify %.2f\n\n"
+                + "Descuento de Netflix: %.2f\n"
+                + "Descuento de YouTube: %.2f\n"
+                + "Descuento de DropBox: %.2f\n"
+                + "Descuento de Spotify: %.2f\n\n"
+                + "Costo total sin descuento: %.2f\n"
+                + "Dinero ahorrado: %.2f\n"
+                + "Costo total con descuento: %.2f\n", 
+                nombreCliente, 
+                precioFinalNetflix, 
+                precioFinalYouTube, 
+                precioFinalDropBox, 
+                precioFinalSpotify,
+                descuentoNetflix,
+                descuentoYouTube,
+                descuentoDropBox,
+                descuentoSpotify,
+                costoTotal, 
+                dineroAhorrado, 
+                costoTotalDescuento);
                 
     }
     
