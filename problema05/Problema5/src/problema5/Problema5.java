@@ -70,7 +70,11 @@ public class Problema5 {
         // Dinero ahorrado
         dineroAhorrado = costoTotal - costoTotalDescuento;
         
-        
+        System.out.printf("Nombre del cliente Precio mensual de Netflix "
+                + "Precio mensual de YouTube "
+                + "Precio mensual de DropBox"
+                + "Precio mensual de Spotify"
+                + "");
                 
                 
     }
