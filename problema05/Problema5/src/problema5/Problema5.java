@@ -48,14 +48,31 @@ public class Problema5 {
         System.out.println("Ingrese la mensualidad de Netflix");
         precioMensualNetflix = entrada.nextInt();
         System.out.println("Ingrese la mensualidad de YouTube");
-        precioMensualYouTube = entrada.nextint();
+        precioMensualYouTube = entrada.nextInt();
         System.out.println("Ingrese la mensualidad de DropBox");
-        precioMensualDropBox = entrada.nextint();
+        precioMensualDropBox = entrada.nextInt();
         System.out.println("Ingrese la mensualidad de Spotify");
-        precioMensualSpotify = entrada.nextint();
-  
+        precioMensualSpotify = entrada.nextInt();
+        // calcular el dinero que no tiene que pagar, que se  descuenta
+        descuentoNetflix = 0.23 * precioMensualNetflix;
+        descuentoYouTube = 0.23 * precioMensualYouTube;
+        descuentoDropBox = 0.45 * precioMensualDropBox;
+        descuentoSpotify = 0 * precioMensualSpotify;
+        // Calcular lo que tiene que pagar despues del descuento
+        precioFinalNetflix = precioMensualNetflix - descuentoNetflix;
+        precioFinalYouTube = precioMensualYouTube - descuentoYouTube;
+        precioFinalDropBox = precioMensualDropBox - descuentoDropBox;
+        precioFinalSpotify = precioMensualSpotify -descuentoSpotify;
+        // Calcula el valor total a pagar sin descuento
+        costoTotal = precioMensualNetflix + precioMensualYouTube + precioMensualDropBox + precioMensualSpotify;
+        // Calcula el valor a pagar con descuento
+        costoTotalDescuento = precioFinalNetflix + precioFinalYouTube + precioFinalDropBox + precioFinalSpotify;
+        // Dinero ahorrado
+        dineroAhorrado = costoTotal - costoTotalDescuento;
         
         
+                
+                
     }
     
 }
